@@ -1,4 +1,4 @@
-package com.mkdvicefuton.trucolajebalada;
+package com.example.mkdvi.contadortruco;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,14 +8,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreTeamA = 6; //Valor inicial da cada Dupla.
-    int scoreTeamB = 6; //Valor inicial da cada Dupla.
+    int scoreTeamA = 0; //Valor inicial da cada Dupla.
+    int scoreTeamB = 0; //Valor inicial da cada Dupla.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(6); // Mostra na tela o número 6.
+        displayForTeamA(0); // Mostra na tela o número 0.
     }
     /**
      * Mostra a pontução da dupla A.
@@ -26,54 +26,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adiciona 1 ponto para Dupla A e remove 1 Ponto da Dupla B.
+     * Adiciona 1 ponto para Dupla A .
      */
 
     public void addOneForDuplaA(View v) {
         scoreTeamA = scoreTeamA + 1;
         displayForTeamA(scoreTeamA);
-        scoreTeamB = scoreTeamB - 1;
-        displayForTeamB(scoreTeamB);
     }
 
     /**
-     * Adiciona 3 pontos para Dupla A e remove 3 Pontos da Dupla B.
+     * Adiciona 3 pontos para Dupla A .
      */
     public void addThreeForDuplaA(View v) {
         scoreTeamA = scoreTeamA + 3;
         displayForTeamA(scoreTeamA);
-        scoreTeamB = scoreTeamB - 3;
-        displayForTeamB(scoreTeamB);
+
     }
 
     /**
-     * Adiciona 6 pontos para Dupla A e remove 6 Pontos da Dupla B.
+     * Adiciona 6 pontos para Dupla A .
      */
     public void addSixForDuplaA(View v) {
         scoreTeamA = scoreTeamA + 6;
         displayForTeamA(scoreTeamA);
-        scoreTeamB = scoreTeamB - 6;
-        displayForTeamB(scoreTeamB);
+
     }
 
     /**
-     * Adiciona 9 pontos para Dupla A e remove 9 Pontos da Dupla B.
+     * Adiciona 9 pontos para Dupla A .
      */
     public void addNineForDuplaA(View v) {
         scoreTeamA = scoreTeamA + 9;
         displayForTeamA(scoreTeamA);
-        scoreTeamB = scoreTeamB - 9;
-        displayForTeamB(scoreTeamB);
+
     }
 
     /**
-     * Adiciona 12 pontos para Dupla A e remove 12 Pontos da Dupla B.
+     * Adiciona 12 pontos para Dupla A.
      */
     public void addTwelveForDuplaA(View v) {
         scoreTeamA = scoreTeamA + 12;
         displayForTeamA(scoreTeamA);
-        scoreTeamB = scoreTeamB - 12;
-        displayForTeamB(scoreTeamB);
+
     }
 
     /**
@@ -85,63 +79,58 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Adiciona 1 ponto para Dupla B e remove 1 Ponto da Dupla A.
+     * Adiciona 1 ponto para Dupla B.
      */
     public void addOneForDuplaB(View v) {
         scoreTeamB = scoreTeamB + 1;
         displayForTeamB(scoreTeamB);
-        scoreTeamA = scoreTeamA - 1;
-        displayForTeamA(scoreTeamA);
+
     }
 
     /**
-     * Adiciona 3 pontos para Dupla B e remove 3 Pontos da Dupla A.
+     * Adiciona 3 pontos para Dupla B.
      */
     public void addThreeForDuplaB(View v) {
         scoreTeamB = scoreTeamB + 3;
         displayForTeamB(scoreTeamB);
-        scoreTeamA = scoreTeamA - 3;
-        displayForTeamA(scoreTeamA);
+
     }
 
     /**
-     * Adiciona 6 pontos para Dupla B e remove 6 Pontos da Dupla A.
+     * Adiciona 6 pontos para Dupla B .
      */
     public void addSixForDuplaB(View v) {
         scoreTeamB = scoreTeamB + 6;
         displayForTeamB(scoreTeamB);
-        scoreTeamA = scoreTeamA - 6;
-        displayForTeamA(scoreTeamA);
+
     }
 
     /**
-     * Adiciona 9 pontos para Dupla B e remove 9 Pontos da Dupla A.
+     * Adiciona 9 pontos para Dupla B .
      */
     public void addNineForDuplaB(View v) {
         scoreTeamB = scoreTeamB + 9;
         displayForTeamB(scoreTeamB);
-        scoreTeamA = scoreTeamA - 9;
-        displayForTeamA(scoreTeamA);
+
     }
 
     /**
-     * Adiciona 12 pontos para Dupla B e remove 12 Pontos da Dupla A.
+     * Adiciona 12 pontos para Dupla B.
      */
     public void addTwelveForDuplaB(View v) {
         scoreTeamB = scoreTeamB + 12;
         displayForTeamB(scoreTeamB);
-        scoreTeamA = scoreTeamA - 12;
-        displayForTeamA(scoreTeamA);
+
     }
 
     /**
      * Reseta as pontuações para 6.
      */
     public void resetScore(View v) {
-        scoreTeamA = 6;
-        scoreTeamB = 6;
-        displayForTeamA(6);
-        displayForTeamB(6);
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(0);
+        displayForTeamB(0);
     }
 
 }
